@@ -172,7 +172,7 @@ def get_system_infos():
             out = str(subprocess.check_output(['lsb_release', '-i']),
                       locale.getpreferredencoding())
         except OSError:
-            distro = platform.linux_distribution()[0]
+            distro = distro.linux_distribution(full_distribution_name=False)[0]
             if not distro:
                 distro = 'linux distribution not found'
         else:
