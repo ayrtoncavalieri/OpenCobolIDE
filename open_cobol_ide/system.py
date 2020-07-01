@@ -16,7 +16,8 @@ windows = platform.system() == 'Windows'
 darwin = platform.system() == 'Darwin'
 linux = platform.system() == 'Linux'
 if linux:
-    ubuntu = platform.linux_distribution()[0].lower() == 'ubuntu'
+    import distro
+    ubuntu = distro.linux_distribution(full_distribution_name=False)[0].lower() == 'ubuntu'
 else:
     ubuntu = False
 
