@@ -183,7 +183,7 @@ def get_system_infos():
     if 'linux' in sys.platform.lower():
         system_info = get_linux_distro()
     elif 'darwin' in sys.platform.lower():
-        system_info = 'Mac OS X %s' % platform.mac_ver()[0]
+        system_info = 'macOS %s' % platform.mac_ver()[0]
     return '\n'.join([
         'Operating System: %s' % system_info,
         'OpenCobolIDE: %s' % __version__,
